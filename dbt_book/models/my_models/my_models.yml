@@ -1,0 +1,151 @@
+version: 2
+
+models:
+  - name: citi_trips_minutes
+    description: "This is a table with an extra column showing the trip duration in minutes"
+    columns:
+      - name: tripduration
+        description: "Trip Duration (in seconds)"
+
+      - name: starttime
+        description: "Start Time, in NYC local time."
+      
+      - name: stoptime
+        description: "Stop Time, in NYC local time."
+
+      - name: start_station_id
+        description: "Start Station ID"
+      
+      - name: start_station_name
+        description: "Start Station Name"
+
+      - name: start_station_latitude
+        description: "Start Station Latitude"
+      
+      - name: start_station_longitude
+        description: "Start Station Longitude"
+
+      - name: end_station_id
+        description: "End Station ID"
+
+      - name: end_station_name
+        description: "End Station Name"
+
+      - name: end_station_latitude
+        description: "End Station Latitude"
+
+      - name: end_station_longitude
+        description: "End Station Longitude"
+      
+      - name: bike_id
+        description: "Bike ID"
+      
+      - name: usertype
+        description: "User Type (Customer = 24-hour pass or 7-day pass user, Subscriber = Annual Member)"
+
+      - name: birth_year
+        description: "Year of Birth"
+
+      - name: gender
+        description: "Gender (unknown, male, female)"
+
+      - name: customer_plan
+        description: "The name of the plan that determines the rate charged for the trip"
+
+      - name: trip_duration_min
+        description: "The trip duration in minutes"
+        
+  - name: citi_trips_round
+    description: '{{ doc("citi_trips_round") }}'
+    columns:
+      - name: tripduration
+        description: '{{ doc("tripduration") }}'
+
+      - name: starttime
+        description: '{{ doc("starttime") }}'
+      
+      - name: stoptime
+        description: '{{ doc("stoptime") }}'
+
+      - name: start_station_id
+        description: "Start Station ID"
+      
+      - name: start_station_name
+        description: "Start Station Name"
+
+      - name: start_station_latitude
+        description: "Start Station Latitude"
+      
+      - name: start_station_longitude
+        description: "Start Station Longitude"
+
+      - name: end_station_id
+        description: "End Station ID"
+
+      - name: end_station_name
+        description: "End Station Name"
+
+      - name: end_station_latitude
+        description: "End Station Latitude"
+
+      - name: end_station_longitude
+        description: "End Station Longitude"
+      
+      - name: bike_id
+        description: "Bike ID"
+      
+      - name: usertype
+        description: "User Type (Customer = 24-hour pass or 7-day pass user, Subscriber = Annual Member)"
+
+      - name: birth_year
+        description: "Year of Birth"
+
+      - name: gender
+        description: "Gender (unknown, male, female)"
+
+      - name: customer_plan
+        description: "The name of the plan that determines the rate charged for the trip"
+
+      - name: trip_duration_min
+        description: '{{ doc("trip_duration_min") }}'
+
+      - name: trip_min_round
+        description: '{{ doc("trip_min_round") }}'
+
+  - name: citi_trips_long
+    description: '{{ doc("citi_trips_long") }}'
+    columns:
+      - name: starttime
+        description: '{{ doc("starttime") }}'
+
+      - name: stoptime
+        description: '{{ doc("stoptime") }}'
+
+      - name: start_station_name
+        description: "Start Station Name"
+        tests:
+          - not_null
+          - unique
+          - long_characters
+          - special_characters
+      
+      - name: end_station_name
+        description: "End Station Name"
+
+      - name: gender
+        description: "Gender (unknown, male, female)"
+
+      - name: trip_duration_min
+        description: '{{ doc("trip_duration_min") }}'
+
+      - name: birth_year
+        description: "Year of Birth"
+      
+      - name: customer_plan
+        description: "The name of the plan that determines the rate charged for the trip"
+
+      - name: trip_min_round
+        description: '{{ doc("trip_min_round") }}'
+
+      
+    
