@@ -126,14 +126,22 @@ models:
         tests:
           - not_null
           - unique
-          - long_characters
+          - long_characters:
+              severity: 'error'
           - special_characters
       
       - name: end_station_name
         description: "End Station Name"
+        # tests:
+        #   # - relationships:
+        #   #     to: ref('citi_trips_round')
+        #   #     field: end_station_name
 
       - name: gender
         description: "Gender (unknown, male, female)"
+        tests:
+          - accepted_values:
+              values: ['unknown', 'male', 'female']
 
       - name: trip_duration_min
         description: '{{ doc("trip_duration_min") }}'
