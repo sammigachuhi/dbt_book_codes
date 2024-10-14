@@ -28,6 +28,11 @@ clean-targets:         # directories to be removed by `dbt clean`
 vars:
   'dbt_date:time_zone': 'Africa/Nairobi'
 
+## 
+seeds:
+  dbt_book:
+    2014-tripdata:
+      schema: nyc2014_data
 # Configuring models
 # Full documentation: https://docs.getdbt.com/docs/configuring-models
 
