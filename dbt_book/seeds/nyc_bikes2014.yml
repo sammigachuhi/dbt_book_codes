@@ -1,0 +1,12 @@
+version: 2
+
+seeds:
+  - name: 2014-tripdata
+    description: "Seed for NYC 2014 bike data"
+    docs:
+      show: true 
+      node_color: purple # Use name (such as node_color: purple) or hex code with quotes (such as node_color: "#cd7f32")
+    config:
+      schema: nyc_bikes2014
+
+  
