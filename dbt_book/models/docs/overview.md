@@ -6,6 +6,8 @@ Learning is not merely the acquisition of knowledge, but the cultivation of the 
 
 ![Example image](assets/image_example.jpg)
 
+Source: Unsplash
+
 Some more text here...
 
 {% enddocs %}

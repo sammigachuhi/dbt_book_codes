@@ -2,11 +2,63 @@ version: 2
 
 seeds:
   - name: 2014-tripdata
-    description: "Seed for NYC 2014 bike data"
+    description: '{{ doc("seed_2014_tripdata") }}'
     docs:
       show: true 
       node_color: purple # Use name (such as node_color: purple) or hex code with quotes (such as node_color: "#cd7f32")
     config:
       schema: nyc_bikes2014
+    tests:
+      - dbt_expectations.expect_table_column_count_to_be_between:
+          min_value: 1 # (Optional)
+    columns:
+      - name: _id
+        description: 'Unique identifier'
+        tests:
+          - dbt_expectations.expect_column_values_to_be_unique
 
-  
+      - name: tripduration
+        description: '{{ doc("tripduration") }}'
+
+      - name: starttime
+        description: ''
+
+      - name: stoptime
+        description: ''
+
+      - name: start station id
+        description: ''
+
+      - name: start station name
+        description: ''
+
+      - name: start station latitude
+        description: ''
+
+      - name: start station longitude
+        description: ''
+
+      - name: end station id
+        description: ''
+
+      - name: end station name
+        description: ''
+
+      - name: end station latitude
+        description: ''
+
+      - name: end station longitude
+        description: ''
+
+      - name: bikeid
+        description: ''
+
+      - name: usertype
+        description: ''
+
+      - name: birthyear
+        description: ''
+
+      - name: gender
+        description: ''
+
