@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: nyc_bikes_nyc_bikes2014
+    schema: nyc_bikes_nyc_bikes2014
+    tables:
+      - name: 2014-tripdata
+
+  - name: nyc_bikes
+    schema: nyc_bikes 
+    tables:
+      - name: citi_trips_round
+
+
+
+
+
