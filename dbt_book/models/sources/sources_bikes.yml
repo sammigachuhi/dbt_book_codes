@@ -147,3 +147,9 @@ sources:
               - dbt_expectations.expect_column_max_to_be_between:
                   min_value: 16 # (Optional)
                   max_value: 100000 # (Optional)
+
+      - name: nyc_bikes_nyc_bikes_nyc_bikes2014
+        schema: nyc_bikes_nyc_bikes_nyc_bikes2014
+        tables:
+          - name: nyc_bikes_timestamp
+            description: ''
