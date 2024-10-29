@@ -1,0 +1,20 @@
+version: 2
+
+exposures:
+
+  - name: station_bikes_exposure
+    label: A join of station tables and bike rides
+    type: dashboard
+    maturity: high
+    url: https://sammigachuhi.github.io/my-portfolio/
+    description: '{{ doc("citi_trips_round") }}'
+
+    depends_on:
+      - ref('citi_trips_round')
+      - ref('citi_trips_minutes') # Added this just to increase complexity of lineage graph
+      - source('nyc_bikes_nyc_bikes2014', '2014-tripdata')
+
+    owner:
+      name: Mr Fantastic
+      email: mrfantastic@unlike.com
+
