@@ -1,4 +1,5 @@
-{{ config(materialized='view') }}
+{{ config(materialized='view'
+) }}
 
 WITH citi_trips_long AS (
     SELECT * FROM (
