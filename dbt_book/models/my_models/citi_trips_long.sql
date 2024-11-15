@@ -16,3 +16,4 @@ WITH citi_trips_long AS (
 
 SELECT * FROM citi_trips_long 
 
+
